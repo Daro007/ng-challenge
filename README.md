@@ -6,10 +6,10 @@
 #### [Angular CLI](https://github.com/angular/angular-cli)
 
 ## Pasos para correr esta aplicación localmente:
--Hacer un 'git clone' del repositorio. 
--En el archivo “api.service.ts” se debe modificar los métodos ‘getOwners’ y ‘getOwnersById’ reemplazando el texto “YOUR_API_KEY” por vuestra propia key de la API. (https://gorest.co.in/)
--Una vez reemplazado ese valor, en vuestro editor de código preferido pueden abrir el proyecto, posicionarse en la carpeta del mismo, abrir la terminal integrada del editor de código y ejecutar el comando ‘ng serve’.
--Y listo, si todo anduvo bien el proyecto debería estar corriendo en el puerto 4200 del servidor local. 
+-Hacer un `git clone` del repositorio. 
+-En el archivo “api.service.ts” se debe modificar los métodos ‘getOwners’ y ‘getOwnersById’ reemplazando el texto `“YOUR_API_KEY”` por vuestra propia key de la API. (https://gorest.co.in/)
+-Una vez reemplazado ese valor, en vuestro editor de código preferido pueden abrir el proyecto, posicionarse en la carpeta del mismo, abrir la terminal integrada del editor de código y ejecutar el comando `ng serve`.
+-Y listo, si todo anduvo bien el proyecto debería estar corriendo en el puerto 4200 del servidor local. `http://localhost:4200/`
 
 ## DESAFIOS COMPLETADOS 
 ## HOME
@@ -28,18 +28,18 @@ En todas las páginas podemos encontrar el header con sus 2 iconos y contadores.
 
 
 ## Subiendo el nivel del Reto
-1. El contador de matagatos en el header incrementa cada vez que se llama a la API. 
+1. **El contador de matagatos en el header incrementa cada vez que se llama a la API.** 
 2. *Muestra la fecha “dob” como la diferencia de tiempo entre la fechade nacimiento y la fecha actual. Por ejemplo, si “dob” es 07-20-1982, y estamos a 07-23-2020, se leería “Nació hace 38 años y 3 días”.*
-Este desafío se podría resolver creando un Pipe que transforme la informacion sobre DOB que llega. Restandosela a la fecha actual.
+**Este desafío se podría resolver creando un Pipe que transforme la informacion sobre DOB que llega. Restandosela a la fecha actual.**
 3. *Los Dueños tienen Fotos asociadas. Investiga la API “photos” busca por el id de User, y completa la información de Detalle.*
-Este desafío se podría resolver de la siguiente manera. Llamar a la API de photos, que devuelve un array de objetos con información como ID y la URL de las fotos. 
-Podriamos dentro del detalle de usuario crear otro botón llamado “Show photo” y para el cual crear un método que filtre el array obtenido de photos por su ID, y cuando el ID haga match devuelva la URL de ese objeto y así la podamos usar en el atributo href del elemento img del HTM.
+**Este desafío se podría resolver de la siguiente manera. Llamar a la API de photos, que devuelve un array de objetos con información como ID y la URL de las fotos. 
+Podriamos dentro del detalle de usuario crear otro botón llamado “Show photo” y para el cual crear un método que filtre el array obtenido de photos por su ID, y cuando el ID haga match devuelva la URL de ese objeto y así la podamos usar en el atributo href del elemento img del HTML.**
 4. *En vez de utilizar el botón “Ver más”, implementa un paginado de tipo “infinite scroll” como el de Twitter o Instagram. De tal forma que se muestren inicialmente los 20 primeros Dueños, y a medida que el usuario scrollea hacia abajo se van cargando los Dueños siguientes de 20 en 20.*
-Este desafío se podría resolver usando ngx-infinite-scroll. 
+**Este desafío se podría resolver usando ngx-infinite-scroll.**
 5. *Modifica la lógica para que en vez de tener que pulsar el botón Buscar, el formulario reactivo detecte que el usuario ha dejado de escribir y haga la búsqueda automáticamente siempre y cuando haya introducido al menos 2 letras.*
-Este desafío se podría resolver creando un método que dispare el llamado a la API una vez que el usuario haya dejado de tipear y haya tipeado al menos 2 caracteres en el Input. Para esto podríamos usar el evento de teclado ‘onkeyup’ setear un setTimeOut unos pocos segundos más tarde y a su vez usar un ngModel en el input para pasar la busqueda de la vista (usuario) al controlador. Y finalmente hacer el llamado a la API con lo que el usuario haya tipeado en el input. 
+**Este desafío se podría resolver creando un método que dispare el llamado a la API una vez que el usuario haya dejado de tipear y haya tipeado al menos 2 caracteres en el Input. Para esto podríamos usar el evento de teclado ‘onkeyup’ setear un setTimeOut unos pocos segundos más tarde y a su vez usar un ngModel en el input para pasar la busqueda de la vista (usuario) al controlador. Y finalmente hacer el llamado a la API con lo que el usuario haya tipeado en el input.** 
 
-### Funcionalidades extra que podríamos agregar 
+## Funcionalidades extra que podríamos agregar 
 - eliminar favoritos desde el modal o desde el detalle del owner
 - cuando un usuario hace click en add to favourites mostrar un texto en el detalle diciendo “este dueño es favorito”.  
 - que se pueda cerrar el detalle del owner.
