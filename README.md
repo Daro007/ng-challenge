@@ -6,10 +6,10 @@
 #### [Angular CLI](https://github.com/angular/angular-cli)
 
 ## Pasos para correr esta aplicación localmente:
--Hacer un `git clone` del repositorio. 
--En el archivo “api.service.ts” se debe modificar los métodos ‘getOwners’ y ‘getOwnersById’ reemplazando el texto `“YOUR_API_KEY”` por vuestra propia key de la API. (https://gorest.co.in/)
--Una vez reemplazado ese valor, en vuestro editor de código preferido pueden abrir el proyecto, posicionarse en la carpeta del mismo, abrir la terminal integrada del editor de código y ejecutar el comando `ng serve`.
--Y listo, si todo anduvo bien el proyecto debería estar corriendo en el puerto 4200 del servidor local. `http://localhost:4200/`
+- Hacer un `git clone` del repositorio. 
+- En el archivo “api.service.ts” se debe modificar los métodos ‘getOwners’ y ‘getOwnersById’ reemplazando el texto `“YOUR_API_KEY”` por vuestra propia key de la API. (https://gorest.co.in/)
+- Una vez reemplazado ese valor, en vuestro editor de código preferido pueden abrir el proyecto, posicionarse en la carpeta del mismo, abrir la terminal integrada del editor de código y ejecutar el comando `ng serve`.
+- Y listo, si todo anduvo bien el proyecto debería estar corriendo en el puerto 4200 del servidor local. `http://localhost:4200/`
 
 ## DESAFIOS COMPLETADOS 
 ## HOME
