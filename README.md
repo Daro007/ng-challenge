@@ -6,12 +6,12 @@
 #### [Angular CLI](https://github.com/angular/angular-cli)
 
 ## Pasos para correr esta aplicación localmente:
--Hacer un “git clone” del repositorio. 
+-Hacer un 'git clone' del repositorio. 
 -En el archivo “api.service.ts” se debe modificar los métodos ‘getOwners’ y ‘getOwnersById’ reemplazando el texto “YOUR_API_KEY” por vuestra propia key de la API. (https://gorest.co.in/)
 -Una vez reemplazado ese valor, en vuestro editor de código preferido pueden abrir el proyecto, posicionarse en la carpeta del mismo, abrir la terminal integrada del editor de código y ejecutar el comando ‘ng serve’.
 -Y listo, si todo anduvo bien el proyecto debería estar corriendo en el puerto 4200 del servidor local. 
 
-## Desafios completados 
+## DESAFIOS COMPLETADOS 
 ## HOME
 En la ruta “/” podemos encontrar la pantalla de Home con 2 componentes Header y Home. En Header podemos ver un logo, y 2 iconos con 2 contadores. A la izquierda encontramos el icono de un gato y el contador “matagatos” que incrementa cada vez que llamamos a la API. Y a la derecha encontramos un icono de un corazón y el contador de “favoritos” que incrementa cada vez que añadimos un dueño a favoritos. 
 Luego, en el componente Home, encontramos 2 botones; Owners y Search, que nos llevan a sus respectivas rutas (“/owners” y “/search”). 
@@ -22,31 +22,21 @@ Finalmente, abajo, al final del listado de owners podemos encontrar un botón qu
 ## SEARCH
 En la ruta “/search” encontramos el mismo header y el componente search que es muy similar al componente “owners” pero también consta de una barra de búsqueda a través de la cual podemos filtrar los owners por su nombre. El usuario debe al menos tipear 2 caracteres para poder realizar la búsqueda. 
 Funcionalidades extra: si el usuario hace click en “search” y ha introducido menos de 2 caracteres un pequeño texto en rojo le indica que debe tipear al menos 2 caracteres para buscar y también si el resultado de la búsqueda no coincide con ningún owner se despliega un texto que le indica al usuario que ningún owner cumple los requisitos de su búsqueda. 
-### NOTA: el botón “show more” solo aparece al principio y tiene la misma funcionalidad que en la página owners. Una vez que el usuario hace click en ‘search’ el botón desaparece porque no entiendo cómo llamar a la siguientes páginas de la API cuando arroja más de 20 resultados la búsqueda. 
+###### *NOTA: el botón “show more” solo aparece al principio y tiene la misma funcionalidad que en la página owners. Una vez que el usuario hace click en ‘search’ el botón desaparece porque no entiendo cómo llamar a la siguientes páginas de la API cuando arroja más de 20 resultados la búsqueda.* 
 ## EL MODAL DE FAVORITOS
 En todas las páginas podemos encontrar el header con sus 2 iconos y contadores. Cuando el usuario hace click en el icono de favoritos se abre un modal que muestra un listado de los owners añadidos a favoritos por el usuario (en caso contrario se muestra un mensaje indicando que aún no se han añadido owners a favoritos)
 
 
 ## Subiendo el nivel del Reto
 1. El contador de matagatos en el header incrementa cada vez que se llama a la API. 
-2. Muestra la fecha “dob” como la diferencia de tiempo entre la fecha
-de nacimiento y la fecha actual. Por ejemplo, si “dob” es 07-20-1982, y
-estamos a 07-23-2020, se leería “Nació hace 38 años y 3 días”.
- Este desafío se podría resolver creando un Pipe que transforme la informacion sobre DOB que llega. Restandosela a la fecha actual.
-3. Los Dueños tienen Fotos asociadas. Investiga la API “photos” busca
-por el id de User, y completa la información de Detalle.
+2. *Muestra la fecha “dob” como la diferencia de tiempo entre la fechade nacimiento y la fecha actual. Por ejemplo, si “dob” es 07-20-1982, y estamos a 07-23-2020, se leería “Nació hace 38 años y 3 días”.*
+Este desafío se podría resolver creando un Pipe que transforme la informacion sobre DOB que llega. Restandosela a la fecha actual.
+3. *Los Dueños tienen Fotos asociadas. Investiga la API “photos” busca por el id de User, y completa la información de Detalle.*
 Este desafío se podría resolver de la siguiente manera. Llamar a la API de photos, que devuelve un array de objetos con información como ID y la URL de las fotos. 
 Podriamos dentro del detalle de usuario crear otro botón llamado “Show photo” y para el cual crear un método que filtre el array obtenido de photos por su ID, y cuando el ID haga match devuelva la URL de ese objeto y así la podamos usar en el atributo href del elemento img del HTM.
-4. En vez de utilizar el botón “Ver más”, implementa un paginado de
-tipo “infinite scroll” como el de Twitter o Instagram. De tal forma que
-se muestren inicialmente los 20 primeros Dueños, y a medida que el
-usuario scrollea hacia abajo se van cargando los Dueños siguientes
-de 20 en 20.
+4. *En vez de utilizar el botón “Ver más”, implementa un paginado de tipo “infinite scroll” como el de Twitter o Instagram. De tal forma que se muestren inicialmente los 20 primeros Dueños, y a medida que el usuario scrollea hacia abajo se van cargando los Dueños siguientes de 20 en 20.*
 Este desafío se podría resolver usando ngx-infinite-scroll. 
-5. Modifica la lógica para que en vez de tener que pulsar el botón
-Buscar, el formulario reactivo detecte que el usuario ha dejado de
-escribir y haga la búsqueda automáticamente siempre y cuando haya
-introducido al menos 2 letras.
+5. *Modifica la lógica para que en vez de tener que pulsar el botón Buscar, el formulario reactivo detecte que el usuario ha dejado de escribir y haga la búsqueda automáticamente siempre y cuando haya introducido al menos 2 letras.*
 Este desafío se podría resolver creando un método que dispare el llamado a la API una vez que el usuario haya dejado de tipear y haya tipeado al menos 2 caracteres en el Input. Para esto podríamos usar el evento de teclado ‘onkeyup’ setear un setTimeOut unos pocos segundos más tarde y a su vez usar un ngModel en el input para pasar la busqueda de la vista (usuario) al controlador. Y finalmente hacer el llamado a la API con lo que el usuario haya tipeado en el input. 
 
 ### Funcionalidades extra que podríamos agregar 
