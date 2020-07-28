@@ -1,9 +1,9 @@
 # Ng Challenge
 
 Pasos para correr esta aplicación localmente se requiere tener instalados: 
-[GIT] (https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-[NODE JS & NPM](https://nodejs.org/en/)
-[Angular CLI](https://github.com/angular/angular-cli)
+#### [GIT](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+#### [NODE JS & NPM](https://nodejs.org/en/)
+#### [Angular CLI](https://github.com/angular/angular-cli)
 
 ## Pasos para correr esta aplicación localmente:
 -Hacer un “git clone” del repositorio. 
