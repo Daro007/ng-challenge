@@ -47,7 +47,7 @@ Podriamos dentro del detalle de usuario crear otro botón llamado “Show photo�
 
 ## Cuestiones que quedaron fuera por falta de tiempo
 - lo más importante que creo que podría solucionar con un poco más de tiempo es la estructura del proyecto ya que estoy rompiendo uno de los principios fundamentales como es el principio DRY, ya que me repito muchas veces. Habría que refactorizar el código y compartimentarlo un poco más.
-Por ejemplo, el header contiene el modal, por lo tanto podríamos hacer dell modal un componente aparte e importarlo en el header. La página owners contiene tanto el listado de los owners como el detalle de los mismos. Ambos podrían ser componentes separados que (ownersList y ownersDetails) y llamarlos desde owners. Etc. 
+Por ejemplo, el header contiene el modal, por lo tanto podríamos hacer del modal un componente aparte e importarlo en el header. La página owners contiene tanto el listado de los owners como el detalle de los mismos. Ambos podrían ser componentes separados (ownersList y ownersDetails) y llamarlos desde owners. Etc. 
 - el diseno no es responsive. Como en la consigna no se hace énfasis en esto solo me enfoque en la vista Desktop, pero por lo general suelo arrancar mis diseños con un aproach ‘mobile first’ .
 
 
